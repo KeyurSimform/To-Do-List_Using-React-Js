@@ -1,0 +1,6 @@
+.node-list{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 25vh; */
+    /* align-self: flex*/   
+}
