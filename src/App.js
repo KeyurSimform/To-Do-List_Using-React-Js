@@ -1,15 +1,22 @@
 import React, { Component } from "react";
 import "./App.css";
-import { NodeList } from "./components/node-list/node-list.component";
 import {ToDo} from "./components/To_Do/to-do.componenet"
+import {NodeList} from "./components/node-list/node-list.component"
+
 
 class App extends Component {
-  constructor() {
-    super();
 
+  // taskComp()  {
+  //   // this.setState({isActive:"ture"});
+  //   console.log("hi");
+  // }
+
+  constructor() {
+    super(); 
+    
     this.state = {
       notes: [
-        {
+        {                                                                
           noteName: "Today's Set-Up",
           noteId: "n1",
           isActive: "",
@@ -34,6 +41,31 @@ class App extends Component {
           noteId: "n5",
           isActive: "",
         },
+        {
+          noteName: "Implementations",
+          noteId: "n6",
+          isActive: "",
+        },
+        {
+          noteName: "Implementations",
+          noteId: "n7",
+          isActive: "",
+        },
+        {
+          noteName: "Implementations",
+          noteId: "n8",
+          isActive: "",
+        },
+        {
+          noteName: "Implementations",
+          noteId: "n9",
+          isActive: "",
+        },
+        {
+          noteName: "Implementations",
+          noteId: "n10",
+          isActive: "",
+        }
       ],
     };
   }
@@ -41,11 +73,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-        <ToDo notes = {this.state.notes}></ToDo>
-        
+        <ToDo notes = {this.state.notes}>
+        </ToDo>
       </div>
     );
   }
-}
+} 
 export default App;

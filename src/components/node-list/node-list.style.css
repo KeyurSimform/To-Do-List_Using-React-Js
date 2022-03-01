@@ -1,6 +1,40 @@
 .node-list{
     display: flex;
     flex-direction: column;
-    /* margin-top: 25vh; */
-    /* align-self: flex*/   
+    padding: 1rem;
+    /* padding-right: 9rem; */
+    margin-top: 10vh;
+    overflow-y: scroll;
+    height: 30vh;
+    text-align: left;
+    cursor: pointer;
 }
+
+.node-list-container{
+    margin-bottom: 20%;
+    padding: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 7px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+  }
+  .fa-solid{
+    color: #059862;
+    float: right;
+    padding-left: 7rem;
+    /* left: 10rem; */
+  
+    }
