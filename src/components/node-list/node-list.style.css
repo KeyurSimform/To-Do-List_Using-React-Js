@@ -3,9 +3,9 @@
     flex-direction: column;
     padding: 1rem;
     /* padding-right: 9rem; */
-    margin-top: 10vh;
+    margin-top: 100px;
     overflow-y: scroll;
-    height: 30vh;
+    height: 325px;
     text-align: left;
     cursor: pointer;
 }
