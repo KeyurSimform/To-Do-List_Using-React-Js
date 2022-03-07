@@ -6,11 +6,7 @@ import {NodeList} from "./components/node-list/node-list.component"
 
 class App extends Component {
 
-  // taskComp()  {
-  //   // this.setState({isActive:"ture"});
-  //   console.log("hi");
-  // }
-
+// **************************************** main app as a class componenet*****************************************************
   constructor() {
     super(); 
     
@@ -19,57 +15,47 @@ class App extends Component {
         {                                                                
           noteName: "Today's Set-Up",
           noteId: "n1",
-          isActive: "",
         },
         {
           noteName: "Today's agenda",
           noteId: "n2",
-          isActive: "",
         },
         {
           noteName: "yesterday's work review",
           noteId: "n3",
-          isActive: "",
         },
         {
           noteName: "Learning Topics",
           noteId: "n4",
-          isActive: "",
         },
         {
           noteName: "Implementations",
           noteId: "n5",
-          isActive: "",
         },
         {
-          noteName: "Implementations",
+          noteName: "Revision",
           noteId: "n6",
-          isActive: "",
         },
         {
-          noteName: "Implementations",
+          noteName: "lookup for the doubts",
           noteId: "n7",
-          isActive: "",
         },
         {
-          noteName: "Implementations",
+          noteName: "discussion with mentor for the doubts",
           noteId: "n8",
-          isActive: "",
         },
         {
-          noteName: "Implementations",
+          noteName: "apply the solution for the doubts",
           noteId: "n9",
-          isActive: "",
         },
         {
-          noteName: "Implementations",
+          noteName: "submiting the assignement",
           noteId: "n10",
-          isActive: "",
         }
       ],
     };
   }
-
+// **************************************** main app rendering*****************************************************
   render() {
     return (
       <div className="App">

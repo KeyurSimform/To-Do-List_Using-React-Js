@@ -1,9 +1,12 @@
 import React from "react";
 
 import "./header.style.css";
+// **************************************** Header component to display the date*****************************************************
 
 export const CurrentDate = () => {
-	console.log("keyur");
+
+	// This function will fetch the current date according to the system's date.
+	
 	let newDate = new Date();
 	let date_raw = newDate.getDate();
 	let month_raw = newDate.toLocaleString("en-us", {month:"short"});
@@ -23,6 +26,7 @@ export const CurrentDate = () => {
 	}
 
 	return (
+		// This will populate the date in the outer most component/
 		<div className="header h-20">
 			<div className="left-side">
 				<div className="DateElem">

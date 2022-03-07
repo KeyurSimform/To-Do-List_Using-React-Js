@@ -1,21 +1,19 @@
 import React from "react";
 import './node-list.style.css';
 
-import { ToDo } from "../To_Do/to-do.componenet";
+
+import NodeItem from "../NodeItem/NodeItem";
+
+// **************************************** Outer most comopenent of the app*****************************************************
 
 export const NodeList = (props) => {
-
-
+// this component will map the notes list in the ToDo component
   return <div className="node-list-container">
              <div className="node-list"> 
              {/* {console.log(note)} */}
-             {props.notes.map((note) => (
-               <p key={note.noteId} >
-               <i class="fa-solid fa-circle-check"></i>
-                {note.noteName}
-                {/* {console.log(note.isActive)} */}
-               </p>
-              ))}
+             {props.notes.map((note) => {
+               return <NodeItem key= {note.noteId} noteName={note.noteName}></NodeItem>; /*Returning the component which will populate the notes in the todo list app */
+             })}
           </div>
-  </div>;
+  </div>; 
 };
