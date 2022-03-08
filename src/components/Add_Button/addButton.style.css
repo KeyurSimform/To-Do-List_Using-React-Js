@@ -27,9 +27,28 @@
     align-items: center;
     align-self: center;
     /* bottom: 50%; */
-    right: 39%;
-    bottom: -9%;
+    right: 120px;
+    bottom: -60px;
     cursor: pointer;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 
+}
+
+.add-input{
+    background-color: #059862;
+    height: 50px;
+    width: 310px;
+    border-radius: 25px;
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.add-input::placeholder{
+    color: white;
+    opacity: 0.5;
 }

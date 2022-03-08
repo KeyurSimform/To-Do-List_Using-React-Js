@@ -13,6 +13,6 @@ export const ToDo = (props) => {
         </CurrentDate>
         <NodeList notes={props.notes}>
         </NodeList>
-        <AddButton notes={props.notes}></AddButton>
+        <AddButton notes={props.notes} addNewNote={props.addNewNote}></AddButton>
     </div>
 }                                     

@@ -5,7 +5,7 @@
     /* padding-right: 9rem; */
     margin-top: 10vh;
     overflow-y: scroll;
-    height: 30vh;
+    height: 350px;
     text-align: left;
     cursor: pointer;
 }
@@ -37,5 +37,4 @@
     float: right;
     padding-left: 7rem;
     /* left: 10rem; */
-  
     }

@@ -2,9 +2,9 @@
     box-sizing: border-box;
     position: relative;
     border: 1px solid white;
-    min-width: 20vw;
-    min-height: 60vh;
-    max-height: 60vh;
+    min-width: 200px;
+    min-height: 600px;
+    max-height: 600px;
     box-shadow: 3px 3px 29px 1px rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;

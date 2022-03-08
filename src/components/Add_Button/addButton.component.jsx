@@ -8,13 +8,38 @@ import "./addButton.style.css";
 
 export let AddButton = (props) => {
 	const [AddIconButton, setAddIconButton] = useState(true);
-
+	const [NewNoteName, setNewNoteName] = useState("");
+// *****************************This will handle changing of the add button onclick**********
 	let AddClickButton = () => {
 		setAddIconButton(!AddIconButton);
 		// ClickHandler = !ClickHandler
 		console.log("add button clicked");
 	};
 
+	let OnChangeHandler = (event) => {
+		setNewNoteName(event.target.value);
+	  };
+
+// ***********This will sense the key press when the input text area is opened******
+	const KeyHandler = (event) => {
+		let UserInput = event.target.value;
+		console.log(UserInput);
+		if (event.key === "Enter") {
+		  if (UserInput.length === 0) {
+			alert("Opps!! please add some note");
+		  } else {
+			// let NewNote = UserInput;	
+			props.addNewNote(UserInput);
+			AddClickButton();
+			// console.log("keyhandler");
+
+		  }
+		}
+		else if(event.key === "Escape"){
+			AddClickButton();
+			// console.log("esc");
+		}
+	  };
     
 	return (
 		<>
@@ -24,14 +49,14 @@ export let AddButton = (props) => {
 				</div>
 			)}
 			{AddIconButton === false && (
-				<div onClick={AddClickButton}>
+				<div>
 					<input
-						className={style.input}
+						className="add-input"							
 						type="text"
-						placeholder="Your Title..."
-						value={enteredTitle}
-						onChange={titleChangeHandler}
-						onKeyUp={enterKeyHandler}
+						placeholder="Add your task here"
+						value={NewNoteName}
+						onChange={OnChangeHandler}
+						onKeyUp={KeyHandler}
 					/>  
 				</div>
 			)}
