@@ -8,11 +8,12 @@ export const CurrentDate = () => {
 	// This function will fetch the current date according to the system's date.
 	
 	let newDate = new Date();
+	
 	let date_raw = newDate.getDate();
 	let month_raw = newDate.toLocaleString("en-us", {month:"short"});
 	let year = newDate.getFullYear();
-    let day = newDate.getDay();
-	var date, month;
+    // let day = newDate.getDate();
+	let date, month;
 
 	if (date_raw < 10) {
 		date = "0" + date_raw.toString();
@@ -24,7 +25,7 @@ export const CurrentDate = () => {
 	} else {
 		month = month_raw.toString();
 	}
-
+	// props.dateChecker(date,month,year);
 	return (
 		// This will populate the date in the outer most component/
 		<div className="header h-20">
@@ -38,7 +39,7 @@ export const CurrentDate = () => {
 				</div>
 			</div>
 			<div className="right-side">
-				<p className="day">Thursday</p>
+				<p className="day">{newDate.toLocaleString('en-us', {  weekday: 'long' })}</p>
 			</div>
 		</div>
 	);

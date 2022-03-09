@@ -16,7 +16,6 @@ const NodeItem = (props) => {
     <p onClick={taskComp} className={`${task && "text-decoration-line-through text-muted"}`}>
       <i className={`${"fa-solid fa-circle-check"} ${task && "text-secondary"}`}></i>
         {props.noteName}
-        {/* {props.noteId} */}
     </p> 
  </div>
   )

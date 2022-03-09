@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 16px;
     /* padding: 10px 10vw 10px 10vw  ; */
     padding-left: 1rem;
     padding-right: 1rem;
@@ -14,13 +14,16 @@
 
 }
 .date{
-    font-size: 47px;
+    font-size: 55px;
     margin: 0;
     padding-right: 5px;
     text-align: center;
 }
 .left-side{
+    /* height: 70px; */
     display: flex;
+    justify-content:center;
+    align-items:center;
 }
 .month, .year{
     margin: 0;

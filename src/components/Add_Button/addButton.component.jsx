@@ -9,7 +9,7 @@ import "./addButton.style.css";
 export let AddButton = (props) => {
 	const [AddIconButton, setAddIconButton] = useState(true);
 	const [NewNoteName, setNewNoteName] = useState("");
-// *****************************This will handle changing of the add button onclick**********
+	// *****************************This will handle changing of the add button onclick**********
 	let AddClickButton = () => {
 		setAddIconButton(!AddIconButton);
 		// ClickHandler = !ClickHandler
@@ -18,29 +18,28 @@ export let AddButton = (props) => {
 
 	let OnChangeHandler = (event) => {
 		setNewNoteName(event.target.value);
-	  };
+	};
 
-// ***********This will sense the key press when the input text area is opened******
+	// ***********This will sense the key press when the input text area is opened******
 	const KeyHandler = (event) => {
 		let UserInput = event.target.value;
-		console.log(UserInput);
+		// console.log(UserInput);
 		if (event.key === "Enter") {
-		  if (UserInput.length === 0) {
-			alert("Opps!! please add some note");
-		  } else {
-			// let NewNote = UserInput;	
-			props.addNewNote(UserInput);
-			AddClickButton();
-			// console.log("keyhandler");
-
-		  }
-		}
-		else if(event.key === "Escape"){
+			if (UserInput.length === 0) {
+				alert("Opps!! please add some note");
+			} else {
+				// let NewNote = UserInput;
+				props.addNewNote(UserInput);
+				AddClickButton();
+				setNewNoteName("");
+				// console.log("keyhandler");
+			}
+		} else if (event.key === "Escape") {
 			AddClickButton();
 			// console.log("esc");
 		}
-	  };
-    
+	};
+
 	return (
 		<>
 			{AddIconButton && (
@@ -51,13 +50,13 @@ export let AddButton = (props) => {
 			{AddIconButton === false && (
 				<div>
 					<input
-						className="add-input"							
+						className="add-input"
 						type="text"
 						placeholder="Add your task here"
 						value={NewNoteName}
 						onChange={OnChangeHandler}
 						onKeyUp={KeyHandler}
-					/>  
+					/>
 				</div>
 			)}
 		</>
